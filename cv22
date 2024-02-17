@@ -1,0 +1,17 @@
+import cv2
+import numpy as np
+
+# img = np.zeros((500, 500, 3), dtype='uint8')
+img = cv2.imread('chel.jpg')
+img = cv2.tr
+
+# img [100:150, 300:300] = 193, 149, 68
+cv2.rectangle(img, (70,70), (100,100), (255, 100, 50), thickness=1)
+cv2.rectangle(img, (90,50), (180,180), (5, 160, 150), thickness=1)
+cv2.rectangle(img, (110,80), (190,160), (25, 10, 250), thickness=1)
+cv2.circle(img, (120, 120), 120, (125, 125, 125), thickness=1)
+cv2.putText(img, 'Circle', (20,280), cv2.FONT_HERSHEY_TRIPLEX, 2, (10,200,0), 2)
+
+cv2.imshow('IMG', img)
+cv2.waitKey(0)
+
